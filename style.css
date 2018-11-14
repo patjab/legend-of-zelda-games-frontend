@@ -1,0 +1,13 @@
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: "Tahoma";
+}
+
+#gameDetail {
+  text-align: center;
+}
+
+.gameLogo {
+  width: 15vmin;
+}
