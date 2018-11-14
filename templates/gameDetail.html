@@ -1,6 +1,18 @@
+<div id="gameToolbar">
+  <ul id="gameList">
+    <li ng-repeat="game in allGames" class="gameName" ng-click="changeGame(game.id)">{{ game.title }}</li>
+  </ul>
+</div>
+
 <div id="gameDetail">
-  <h3>{{ currentGame.title }}</h3>
+  <h2>{{ currentGame.title }}</h2>
   <img src="{{ currentGame.image }}" class="gameLogo"/><br/>
   <p>Release Date: {{ currentGame.release_date }}</p>
   <p>Platform: {{ currentGame.platform }}</p>
+
+  <details ng-repeat="dungeon in currentGame.dungeons">
+    <summary>{{ dungeon.name }}</summary>
+    <p>Boss: {{ dungeon.boss }}</p>
+    <p>Treasure: {{ dungeon.treasure }}</p>
+  </details>
 </div>

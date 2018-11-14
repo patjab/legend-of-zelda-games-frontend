@@ -4,6 +4,29 @@ body {
   font-family: "Tahoma";
 }
 
+#gameList {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.gameName {
+  list-style-type: none;
+  display: inline;
+  padding: 10px;
+  margin: 5px;
+  border: solid 1px;
+  border-color: #000000;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #0077CC;
+  font-family: "Impact";
+}
+
+.gameName:hover {
+  background-color: #0077FF;
+}
+
 #gameDetail {
   text-align: center;
 }
