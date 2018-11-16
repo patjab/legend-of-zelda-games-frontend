@@ -1,5 +1,5 @@
 body {
-  background-color: #000000;
+  background: #000000 url("http://hdqwalls.com/wallpapers/the-legend-of-zelda-breath-of-the-wild-art-ae.jpg") no-repeat fixed center;
   color: #FFFFFF;
   font-family: "Tahoma";
 }
@@ -8,6 +8,9 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  padding: 0px;
+  width: 100vw;
+  overflow-x: auto;
 }
 
 .gameName {
@@ -15,16 +18,29 @@ body {
   display: inline;
   padding: 10px;
   margin: 5px;
-  border: solid 1px;
-  border-color: #000000;
+  border: 1px dashed #FFFFFF;
   border-radius: 20px;
   text-align: center;
   background-color: #0077CC;
   font-family: "Impact";
+  font-size: 12px;
+
+  min-width: 50px;
+  min-height: 50px;
+
+  filter: grayscale(100%);
+  background-size: 97px;
+  background-position: 80%;
+  background-repeat: no-repeat;
+
 }
 
 .gameName:hover {
   background-color: #0077FF;
+  position: relative;
+  filter: grayscale(0%);
+  border: 1px solid yellow;
+
 }
 
 #gameDetail {
@@ -32,5 +48,108 @@ body {
 }
 
 .gameLogo {
-  width: 15vmin;
+  width: 200px;
+}
+
+.gameFacts {
+  margin: 15px;
+}
+
+#allGames {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.gameCardImage {
+  width: 100px;
+}
+
+figure {
+  position: relative;
+  min-height: 200px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+figcaption {
+  position: absolute;
+  font-size: 12px;
+  bottom: 5%;
+  left: 5%;
+  max-width: 80%;
+  background-color: #333333;
+  text-align: center;
+  width: 100%;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+header {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#gameToolbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  background-color: #0055AA;
+  height: 100px;
+}
+
+section#gameDetail {
+  display: grid;
+  grid-template-columns: 350px;
+  /* margin: 0; */
+}
+
+aside#metaGameDetail {
+  grid-column: 1;
+  background: rgba(25, 25, 25, 0.7);
+  /* padding-top: 30px; */
+  margin-left: 40px;
+  margin-right: 20px;
+  border-radius: 10px;
+  height: 500px;
+  padding-top: 100px;
+}
+
+section#dungeonsDetail {
+  grid-column: 2;
+  background: rgba(25, 25, 25, 0.4);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  margin-right: 40px;
+}
+
+summary {
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.bossName, .dungeonTreasure {
+  margin: 0;
+  padding-left: 70px;
+}
+
+details {
+  margin-bottom: 10px;
+}
+
+.gameData, .gameDataTitle {
+  margin: 0;
+}
+
+.gameData {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.gameDataTitle {
+  font-size: 12px;
 }

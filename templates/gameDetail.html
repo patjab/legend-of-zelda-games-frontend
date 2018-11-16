@@ -1,18 +1,28 @@
+<section id="gameDetail">
+  <aside id="metaGameDetail">
+    <img src="{{ currentGame.image }}" class="gameLogo"/><br/>
+    <div class="gameFacts">
+      <p class="gameData">{{ currentGame.release_date }}</p>
+      <p class="gameDataTitle">Release Date</p>
+    </div>
+    <div class="gameFacts">
+      <p class="gameData">{{ currentGame.platform }}</p>
+      <p class="gameDataTitle">Platform</p>
+    </div>
+  </aside>
+
+  <section id="dungeonsDetail">
+    <header>{{ currentGame.title }}</header>
+    <details ng-repeat="dungeon in currentGame.dungeons">
+      <summary>{{ dungeon.name }}</summary>
+      <p class="bossName">Boss: {{ dungeon.boss }}</p>
+      <p class="dungeonTreasure">Treasure: {{ dungeon.treasure }}</p>
+    </details>
+  </section>
+</section>
+
 <div id="gameToolbar">
   <ul id="gameList">
-    <li ng-repeat="game in allGames" class="gameName" ng-click="changeGame(game.id)">{{ game.title }}</li>
+    <li ng-repeat="game in games" class="gameName" ng-click="changeGame(game.id)" style="background-image: url('{{ game.image }}');"></li>
   </ul>
-</div>
-
-<div id="gameDetail">
-  <h2>{{ currentGame.title }}</h2>
-  <img src="{{ currentGame.image }}" class="gameLogo"/><br/>
-  <p>Release Date: {{ currentGame.release_date }}</p>
-  <p>Platform: {{ currentGame.platform }}</p>
-
-  <details ng-repeat="dungeon in currentGame.dungeons">
-    <summary>{{ dungeon.name }}</summary>
-    <p>Boss: {{ dungeon.boss }}</p>
-    <p>Treasure: {{ dungeon.treasure }}</p>
-  </details>
 </div>
