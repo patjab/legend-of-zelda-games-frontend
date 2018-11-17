@@ -21,22 +21,26 @@ lozApp.directive('gameCard', function() {
     templateUrl: './customDir/gameCard.html',
     replace: true,
     scope: {
-      gameObject: '='
+      gameObject: '=',
+      yearsSinceRelease: '&',
+      chooseGame: '&'
     }
   }
 })
 
-lozApp.controller('allGamesController', ['$scope', 'games', function($scope, allGames) {
+lozApp.controller('allGamesController', ['$scope', '$location', 'games', function($scope, $location, allGames) {
+  $scope.chooseGame = (id) => $location.path(`games/${id}`)
+  $scope.yearsSinceRelease = (releaseDate) => {
+    return (new Date()).getFullYear() - parseInt(releaseDate.slice(-4))
+  }
+
   allGames.getAllGames()
   .then(data => $scope.games = data.data)
 }])
 
 lozApp.config(function($routeProvider) {
   $routeProvider
-  .when("/", {
-    template: '<h3>Main page</h3>'
-  })
-  .when('/games', {
+  .when('/', {
     templateUrl: './templates/allGames.html',
     controller: 'allGamesController'
   })

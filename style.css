@@ -5,12 +5,54 @@ body {
   overflow-y: hidden;
 }
 
+/* FOR CUSTOM DIRECTIVES */
 #allGames {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
   align-content: center;
 }
+
+.gameCard {
+  position: relative;
+  min-height: 230px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgb(0, 153, 204, 1);
+  padding: 30px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.gameCard:hover {
+  background: rgb(0, 175, 225, 1);
+}
+
+.gameCaption {
+  color: #FFFFFF;
+  background: #0077FE;
+  position: absolute;
+  font-size: 12px;
+  bottom: 0%;
+  left: 0%;
+  max-width: 90%;
+  text-align: center;
+  width: 100%;
+  padding: 5%;
+  font-family: Arial;
+}
+
+#allGamesHeader {
+  text-align: center;
+  margin: 20px;
+  color: rgb(0, 100, 150);
+}
+
+.gameCardImage {
+  width: 100px;
+}
+
+/* FOR SHOW GAME VIEWER */
 
 #gameList {
   display: flex;
@@ -66,29 +108,6 @@ body {
 }
 
 
-.gameCardImage {
-  width: 100px;
-}
-
-figure {
-  position: relative;
-  min-height: 200px;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-figcaption {
-  position: absolute;
-  font-size: 12px;
-  bottom: 5%;
-  left: 5%;
-  max-width: 80%;
-  background-color: #333333;
-  text-align: center;
-  width: 100%;
-  padding: 5%;
-  border-radius: 10px;
-}
 
 header {
   font-size: 36px;

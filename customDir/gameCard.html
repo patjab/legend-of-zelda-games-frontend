@@ -1,7 +1,8 @@
-<figure>
+<figure class="gameCard" ng-click="chooseGame({id: gameObject.id})">
   <img ng-src="{{ gameObject.image }}" alt="alternative text" class="gameCardImage"/>
-  <figcaption>
-    {{ gameObject.title }}<br/>
+  <figcaption class="gameCaption">
+    <h4>{{ gameObject.title }}</h4>
+    {{ yearsSinceRelease({release_date: gameObject.release_date}) }} years old<br/>
     (<em>{{ gameObject.platform }}</em>)
   </figcaption>
 </figure>
