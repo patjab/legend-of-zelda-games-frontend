@@ -9,6 +9,18 @@
   overflow: hidden;
 }
 
+
+.goldenCard {
+  position: relative;
+  min-height: 230px;
+  padding: 15px;
+  border-radius: 10px;
+  background: gold;
+  padding: 30px;
+  margin: 10px;
+  overflow: hidden;
+}
+
 .gameCardImage {
   width: 100px;
 }

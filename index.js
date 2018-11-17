@@ -24,6 +24,20 @@ lozApp.directive('gameCard', function() {
       gameObject: '=',
       yearsSinceRelease: '&',
       chooseGame: '&'
+    },
+    compile: function(el, at) {
+      return {
+        // pre: function(scope, elements, attributes){
+        //   if (scope.gameObject.title === "Ocarina of Time") {
+        //     attributes.class = ""
+        //   }
+        // },
+        post: function(scope, elements, attributes) {
+          if (scope.gameObject.title === "Ocarina of Time") {
+            scope.gameObject.title = "MASTER SWORD"
+          }
+        }
+      }
     }
   }
 })
