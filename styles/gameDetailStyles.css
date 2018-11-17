@@ -1,58 +1,18 @@
-body {
-  background: #000000 url("http://hdqwalls.com/wallpapers/the-legend-of-zelda-breath-of-the-wild-art-ae.jpg") no-repeat fixed center;
-  color: #FFFFFF;
-  font-family: "Tahoma";
-  overflow-y: hidden;
-}
 
-/* FOR CUSTOM DIRECTIVES */
-#allGames {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  align-content: center;
-}
 
-.gameCard {
-  position: relative;
-  min-height: 230px;
-  padding: 15px;
-  border-radius: 10px;
-  background: rgb(0, 153, 204, 1);
-  padding: 30px;
-  margin: 10px;
-  overflow: hidden;
-}
-
-.gameCard:hover {
-  background: rgb(0, 175, 225, 1);
-}
-
-.gameCaption {
-  color: #FFFFFF;
-  background: #0077FE;
-  position: absolute;
-  font-size: 12px;
-  bottom: 0%;
-  left: 0%;
-  max-width: 90%;
+#gameDetail {
   text-align: center;
-  width: 100%;
-  padding: 5%;
-  font-family: Arial;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
-#allGamesHeader {
-  text-align: center;
-  margin: 20px;
-  color: rgb(0, 100, 150);
+.gameLogo {
+  width: 200px;
 }
 
-.gameCardImage {
-  width: 100px;
+.gameFacts {
+  margin: 15px;
 }
-
-/* FOR SHOW GAME VIEWER */
 
 #gameList {
   display: flex;
@@ -93,27 +53,8 @@ body {
 
 }
 
-#gameDetail {
-  text-align: center;
-  height: calc(100vh - 100px);
-  overflow-y: auto;
-}
-
-.gameLogo {
-  width: 200px;
-}
-
-.gameFacts {
-  margin: 15px;
-}
 
 
-
-header {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
 
 #gameToolbar {
   position: fixed;
