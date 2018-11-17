@@ -2,6 +2,14 @@ body {
   background: #000000 url("http://hdqwalls.com/wallpapers/the-legend-of-zelda-breath-of-the-wild-art-ae.jpg") no-repeat fixed center;
   color: #FFFFFF;
   font-family: "Tahoma";
+  overflow-y: hidden;
+}
+
+#allGames {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 #gameList {
@@ -45,6 +53,8 @@ body {
 
 #gameDetail {
   text-align: center;
+  height: calc(100vh - 100px);
+  overflow-y: auto;
 }
 
 .gameLogo {
@@ -55,12 +65,6 @@ body {
   margin: 15px;
 }
 
-#allGames {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  align-content: center;
-}
 
 .gameCardImage {
   width: 100px;
@@ -104,13 +108,11 @@ header {
 section#gameDetail {
   display: grid;
   grid-template-columns: 350px;
-  /* margin: 0; */
 }
 
 aside#metaGameDetail {
   grid-column: 1;
   background: rgba(25, 25, 25, 0.7);
-  /* padding-top: 30px; */
   margin-left: 40px;
   margin-right: 20px;
   border-radius: 10px;
