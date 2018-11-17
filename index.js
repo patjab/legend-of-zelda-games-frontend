@@ -30,7 +30,12 @@ lozApp.directive('gameCard', function() {
         post: function(scope, element, attributes) {
           if (scope.gameObject.title === "Ocarina of Time") {
             scope.gameObject.title = "MASTER SWORD"
-            element.addClass('goldenCard')
+          }
+
+          if (parseInt(scope.gameObject.id) % 2 === 0) {
+            element[0].style.backgroundColor = 'lightblue'
+            element[0].onmouseover = () => element[0].style.backgroundColor = 'white'
+            element[0].onmouseout = () => element[0].style.backgroundColor = 'lightblue'
           }
         }
       }
