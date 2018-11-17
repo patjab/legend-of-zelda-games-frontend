@@ -27,14 +27,10 @@ lozApp.directive('gameCard', function() {
     },
     compile: function(el, at) {
       return {
-        // pre: function(scope, elements, attributes){
-        //   if (scope.gameObject.title === "Ocarina of Time") {
-        //     attributes.class = ""
-        //   }
-        // },
-        post: function(scope, elements, attributes) {
+        post: function(scope, element, attributes) {
           if (scope.gameObject.title === "Ocarina of Time") {
             scope.gameObject.title = "MASTER SWORD"
+            element.addClass('goldenCard')
           }
         }
       }
